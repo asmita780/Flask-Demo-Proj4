@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{% block title %} My web side {% endblock %}</title> <!--a) most impornt line to work jinja2 (necessary to put)-->
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navitation
+        {
+            background: grey; font-family: calibri; padding-right: 15px; padding-left: 15px;
+        }
+
+        .navdiv
+        {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+
+        li
+        {
+            list-style: none;
+            display: inline-block; /* for arranfing contents inn one row */
+        }
+
+        li a
+        {
+            color: white; /* color on text */
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+
+        }
+
+        button 
+        {
+            background-color: bisque;
+            margin-left: 10ppx;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        button a
+        {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navitation"> 
+        <div class="navdiv">
+            <div class="logo">coding</div>
+            <ul>
+                <li> <a href="/">Home</a> </li>
+                <li> <a href="/about">About</a></li>
+                <li> <a href="/contect">Contect</a> </li>
+                <button> <a href="/login">Login</a> </button>
+                <button> <a href="#">SignUp</a> </button>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}  <!--b)importand -->
+    {% endblock %}
+    
+</body>
+</html>
